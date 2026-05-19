@@ -1,0 +1,30 @@
+# Security / Secrets
+.env
+*.env
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Databases (SQLite memory/files)
+*.db
+*.sqlite3
+
+# Vector Stores (If you save FAISS locally later)
+faiss_index/
+*.faiss
+*.pkl
+
+# IDEs & OS Files
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+*.log
