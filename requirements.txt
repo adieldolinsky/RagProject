@@ -1,0 +1,7 @@
+Flask
+unstructured[pdf]
+unstructured-inference
+sentence-transformers
+faiss-cpu
+python-dotenv
+google-genai

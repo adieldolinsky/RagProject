@@ -4,52 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Financial RAG Assistant</title>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; background-color: #f4f7f6; color: #333; }
-        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        .input-group { display: flex; gap: 10px; margin-top: 20px; }
-        input[type="text"] { flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; }
-        button { background: #3498db; color: white; border: none; padding: 12px 20px; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }
-        button:hover { background: #2980b9; }
-        .answer-box { background: #e8f8f5; border-left: 5px solid #1abc9c; padding: 15px; margin-top: 20px; border-radius: 4px; line-height: 1.5;}
-        .sources-box { margin-top: 30px; }
-        .source-item { background: #fdfefe; border: 1px solid #ddd; padding: 15px; margin-top: 10px; border-radius: 4px; font-size: 14px; }
-        .loading { display: none; margin-top: 15px; font-weight: bold; color: #e67e22; }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>Financial RAG Assistant</h1>
-        <p>Ask any question about the Amdocs financial report.</p>
-        
-        <form method="POST" action="/" onsubmit="document.getElementById('loading').style.display='block';">
-            <div class="input-group">
-                <input type="text" name="query" placeholder="e.g., What percentage of revenue comes from Europe?" value="{{ query }}" required>
-                <button type="submit">Ask</button>
+    <div class="app">
+        <header class="header">
+            <div>
+                <h1>Financial RAG Assistant</h1>
+                <p>Ask questions about uploaded financial reports — with session memory</p>
             </div>
-            <div id="loading" class="loading">Analyzing documents and generating response...</div>
-        </form>
+            <div class="header-actions">
+                <button type="button" id="clear-chat" class="btn-ghost" title="Clear conversation">Clear chat</button>
+            </div>
+        </header>
 
-        {% if answer %}
-        <div class="answer-box">
-            <h3>Answer:</h3>
-            <p>{{ answer }}</p>
-        </div>
+        <main class="chat-main">
+            <section id="messages" class="messages" aria-live="polite">
+                <section class="welcome">
+                    <h2>Financial Document Assistant</h2>
+                    <p>Ask questions about the uploaded financial reports. Your conversation is saved for this session.</p>
+                </section>
+            </section>
 
-        <div class="sources-box">
-            <h3>Retrieved Context (Top Sources):</h3>
-            {% for chunk in chunks %}
-            <div class="source-item">
-                <strong>Type:</strong> {{ chunk.type | upper }} <br>
-                <strong>Distance Score:</strong> {{ chunk.score | round(4) }} <br><br>
-                <div style="background: #f9f9f9; padding: 10px; overflow-x: auto; border: 1px solid #eee;">
-                    {{ chunk.content | safe }}
+            <div id="typing-indicator" class="typing-indicator" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+
+            <footer class="composer">
+                <form id="chat-form">
+                    <textarea
+                        id="query-input"
+                        name="query"
+                        rows="1"
+                        placeholder="Ask a question about the report…"
+                        autocomplete="off"
+                        required
+                    ></textarea>
+                    <button type="submit" id="send-btn" class="btn-send">Send</button>
+                </form>
+                <div id="loading-bar" class="loading-bar">
+                    <span class="spinner" aria-hidden="true"></span>
+                    <span>Retrieving context and generating answer…</span>
                 </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% endif %}
+            </footer>
+        </main>
     </div>
+
+    <div id="toast" class="toast" role="alert"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.4/dist/purify.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>

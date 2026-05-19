@@ -12,12 +12,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Databases (SQLite memory/files)
+# Databases and Local Indexes (Let the container build its own)
 instance/
 *.db
 *.sqlite3
-
-# Vector Stores (If you save FAISS locally later)
 faiss_index/
 *.faiss
 *.pkl
@@ -26,6 +24,3 @@ faiss_index/
 .vscode/
 .idea/
 .DS_Store
-
-# Logs
-*.log
