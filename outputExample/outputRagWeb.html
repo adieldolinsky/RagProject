@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial RAG Assistant</title>
+    <link rel="stylesheet" href="./outputRagWeb_files/main.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div>
+                <h1>Financial RAG Assistant</h1>
+                <p>Ask questions about uploaded financial reports — with session memory</p>
+            </div>
+            <div class="header-actions">
+                <button type="button" id="clear-chat" class="btn-ghost" title="Clear conversation">Clear chat</button>
+            </div>
+        </header>
+
+        <main class="chat-main">
+            <section id="messages" class="messages" aria-live="polite">
+        
+      <article class="message user" data-message-id="1779202015934"><div class="bubble">what was Amdocs total revenue in fiscal year 2024?</div><div class="message-meta">17:46</div></article><article class="message assistant" data-message-id="16"><div class="bubble markdown-body"><p>Amdocs' total revenue in fiscal year 2024 was <strong>$5,005.0 million</strong>. This represented an increase of $117.4 million, or 2.4%, compared to $4,887.6 million in fiscal year 2023.</p>
+</div>
+      <button type="button" class="sources-toggle" data-target="sources-16">
+        View 10 retrieved sources
+      </button>
+      <div class="sources-panel" id="sources-16">
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.579</span>
+            </header>
+            <div class="source-content" data-html="1">31
+
+Operating Results
+
+The following table sets forth for the fiscal years ended September 30, 2024, 2023 and 2022, certain items in our consolidated statements of income reflected as a percentage of revenue (figures may not sum because of rounding):</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.565</span>
+            </header>
+            <div class="source-content" data-html="1">In evaluating Amdocs’ portfolio of products, services and business activities in relation to our strategic investment priorities for fiscal year 2025, we decided to phase out several low-margin, non-core business activities that we believe are becoming commoditized and hold little potential for long-term value addition or profitability enhancement in the future. These activities, which generated revenue of approximately $600 million in fiscal year 2024, included, among others, certain low-margin software and hardware partner activities, Vubiquity’s transactional video on demand business and other non-core subscription services. These activities were substantially already ceased in the first quarter of fiscal 2025.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.540</span>
+            </header>
+            <div class="source-content" data-html="1">Net income attributable to Amdocs Limited. Net income decreased by $47.5 million, or 8.8%, to $493.2 million in fiscal year 2024, from $540.7 million in fiscal year 2023. The decrease in net income is primarily attributable to a decrease in operating income, primarily as a result of an increase in restructuring charges and an increase in interest and other expense, net.
+
+Diluted Earnings Per Share. Diluted earnings per share decreased by $0.24, or 5.3%, to $4.25 in fiscal year 2024, from $4.49 in fiscal year 2023. The decrease in diluted earnings per share was attributable to a decrease in net income, partially offset by a decrease in the diluted weighted average number of shares outstanding, which resulted from share repurchases. The restructuring charges of $131.1 million and $70.9 million in fiscal years 2024 and 2023, decreased the diluted earnings per share by $0.98 and $0.46, respectively. Please see also Note 21 to our consolidated financial statements.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.538</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue
+
+Operating expenses:
+
+Operating income
+
+Interest and other expense, net
+
+Gain from sale of a business
+
+Income before income taxes
+
+Income taxes
+
+Net income
+
+Net income attributable to noncontrolling interests
+
+100%
+
+12.0%
+
+Net income attributable to Amdocs Limited
+
+12.0%</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.524</span>
+            </header>
+            <div class="source-content" data-html="1">32
+
+Revenue. Revenue increased by $117.4 million, or 2.4%, to $5,005.0 million in fiscal year 2024, from $4,887.6 million in fiscal year 2023. The increase in revenue for fiscal year ended September 30, 2024, was attributable to increased activity across all regions. Revenue for fiscal year 2024 increased by 2.7% compared to fiscal year 2023, excluding approximately 0.3% negative foreign currency fluctuations impact. Revenue from our two largest customers increased in aggregate by 3.0 % in fiscal year 2024 compared to fiscal year 2023, while revenue from all other customers also increased in aggregate by 2.5%, excluding approximately 0.6% negative foreign currency fluctuations impact.
+
+In fiscal year 2024, revenue from customers in North America, Europe and the rest of the world accounted for 66.5%, 14.5% and 19.0%, respectively, of total revenue, compared to 67.7%, 14.4% and 17.9%, respectively, in fiscal year 2023.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.515</span>
+            </header>
+            <div class="source-content" data-html="1">Fiscal Years Ended September 30, 2024 and 2023
+
+The following is a tabular presentation of our results of operations for the fiscal year ended September 30, 2024, compared to the fiscal year ended September 30, 2023. Following the table is a discussion and analysis of our business and results of operations for these fiscal years.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.500</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue 2024 100% September 2023 2022 100% 100% )perating expenses: Cost of revenue 64.9 64.7 64.6 Research and development 72 17 7.8 Selling, general and administrative 11.4 11.7 11.5 Amortization of purchased intangible assets and other 12 12 1.6 2.6 1.5 — Restructuring charges 87.4 86.6 85.5 )perating income 12.6 13.4 145 nterest and other expense, net (0.7) (0.4) (0.6) sain from sale of a business — — 0.2 ncome before income taxes 11.8 13.0 14.2 ncome taxes 1.9 1.9 2.2 Net income 9.9% 11.1% 12.0% Net income attributable to noncontrolling interests 0.06 0.05 — Net income attributable to Amdocs Limited 9.9% 11.1% 12.0%</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.494</span>
+            </header>
+            <div class="source-content" data-html="1">Interest and Other Expense, Net. Interest and other expense, net, changed from a net expense of $17.6 million in fiscal year 2023 to a net expense of $37.5 million in fiscal year 2024. The change was primarily attributable to increase in interest expenses net of interest income, as a result of lower level of cash balances, changes in minority equity investments measured at fair value, and to a lesser extent, an increase in adverse foreign exchange fluctuation charges.
+
+Income Taxes. Income taxes for fiscal year 2024 were $94.8 million on pre-tax income of $591.1 million, resulting in an effective tax rate of 16.0% in fiscal year 2024, compared to 14.7% in fiscal year 2023. Our effective tax rate may fluctuate between periods as a result of discrete items that may affect a particular period, please see Note 11 to our consolidated financial statements.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.494</span>
+            </header>
+            <div class="source-content" data-html="1">Operating Income. Operating income decreased by $25.4 million, or 3.9%, to $628.6 million in fiscal year 2024, from $654.0 million in fiscal year 2023. Operating income decreased as a percentage of total revenue, from 13.4% in fiscal year 2023 to 12.6% in fiscal year 2024. The decrease in operating income was attributable primarily to an increase in restructuring charges recorded in fiscal year 2024 compared to fiscal year 2023, as discussed above. Excluding the restructuring charges of $131.1 and $70.9 million recorded in fiscal years 2024 and 2023, respectively, our operating income as a percentage of revenue would have increased by 60 basis points, primarily as a result of continued focus on operational excellence through disciplined resource management, automation, and tools leveraging AI as well as GenAI, to drive additional cost savings and efficiency improvements. Our operating income was positively affected by foreign exchange impacts.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.481</span>
+            </header>
+            <div class="source-content" data-html="1">Cost of Revenue. Cost of revenue consists primarily of costs associated with providing services to customers, including compensation expense and costs of third-party products and services, as well as fee and royalty payments to software suppliers. Cost of revenue increased by $89.7 million, or 2.8%, to $3,249.6 million in fiscal year 2024, from $3,159.9 million in fiscal year 2023. The cost of revenue as a percentage of total revenue slightly increased, from 64.7% in fiscal year 2023 to 64.9% in fiscal year 2024. The slight increase in cost of revenue as a percentage of revenue, was commensurate with revenue growth. Our cost of revenue was positively impacted by our continued focus on operational efficiency improvements and by foreign exchange fluctuations.</div>
+          </article>
+        </div>
+    <div class="message-meta">17:46</div></article><article class="message user" data-message-id="1779202109636"><div class="bubble">which geographic region accounted for the highest percentage of revenue in 2024 and what was the percentage?</div><div class="message-meta">17:48</div></article><article class="message assistant" data-message-id="18"><div class="bubble markdown-body"><p>In fiscal year 2024, <strong>North America</strong> accounted for the highest percentage of Amdocs' total revenue at <strong>66.5%</strong>.</p>
+</div>
+      <button type="button" class="sources-toggle" data-target="sources-18">
+        View 10 retrieved sources
+      </button>
+      <div class="sources-panel" id="sources-18">
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.557</span>
+            </header>
+            <div class="source-content" data-html="1">32
+
+Revenue. Revenue increased by $117.4 million, or 2.4%, to $5,005.0 million in fiscal year 2024, from $4,887.6 million in fiscal year 2023. The increase in revenue for fiscal year ended September 30, 2024, was attributable to increased activity across all regions. Revenue for fiscal year 2024 increased by 2.7% compared to fiscal year 2023, excluding approximately 0.3% negative foreign currency fluctuations impact. Revenue from our two largest customers increased in aggregate by 3.0 % in fiscal year 2024 compared to fiscal year 2023, while revenue from all other customers also increased in aggregate by 2.5%, excluding approximately 0.6% negative foreign currency fluctuations impact.
+
+In fiscal year 2024, revenue from customers in North America, Europe and the rest of the world accounted for 66.5%, 14.5% and 19.0%, respectively, of total revenue, compared to 67.7%, 14.4% and 17.9%, respectively, in fiscal year 2023.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.553</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue from customers in North America increased in absolute amount in fiscal year 2024, primarily attributable to higher revenue from key customers in North America. Revenue from customers in North America increased in fiscal year 2024, while total revenue increased at a higher rate, primarily due to slower pipeline to sales conversion, which resulted in a decrease of revenue from customers in North America as a percentage of total revenue.
+
+Revenue from customers in Europe as a percentage of total revenue remains stable. Revenue from customers in Europe increased in absolute amount in fiscal year 2024, as a result of an increase in managed services arrangements, as we expand our presence in this region.
+
+Revenue from customers in rest of the world increased significantly in fiscal year 2024, as project and managed services activities continued to ramp up with various customers, primarily in the Asia-Pacific region.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.531</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue
+
+Operating expenses:
+
+Operating income
+
+Interest and other expense, net
+
+Gain from sale of a business
+
+Income before income taxes
+
+Income taxes
+
+Net income
+
+Net income attributable to noncontrolling interests
+
+100%
+
+12.0%
+
+Net income attributable to Amdocs Limited
+
+12.0%</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.518</span>
+            </header>
+            <div class="source-content" data-html="1">31
+
+Operating Results
+
+The following table sets forth for the fiscal years ended September 30, 2024, 2023 and 2022, certain items in our consolidated statements of income reflected as a percentage of revenue (figures may not sum because of rounding):</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.485</span>
+            </header>
+            <div class="source-content" data-html="1">In evaluating Amdocs’ portfolio of products, services and business activities in relation to our strategic investment priorities for fiscal year 2025, we decided to phase out several low-margin, non-core business activities that we believe are becoming commoditized and hold little potential for long-term value addition or profitability enhancement in the future. These activities, which generated revenue of approximately $600 million in fiscal year 2024, included, among others, certain low-margin software and hardware partner activities, Vubiquity’s transactional video on demand business and other non-core subscription services. These activities were substantially already ceased in the first quarter of fiscal 2025.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.482</span>
+            </header>
+            <div class="source-content" data-html="1">Net income attributable to Amdocs Limited. Net income decreased by $47.5 million, or 8.8%, to $493.2 million in fiscal year 2024, from $540.7 million in fiscal year 2023. The decrease in net income is primarily attributable to a decrease in operating income, primarily as a result of an increase in restructuring charges and an increase in interest and other expense, net.
+
+Diluted Earnings Per Share. Diluted earnings per share decreased by $0.24, or 5.3%, to $4.25 in fiscal year 2024, from $4.49 in fiscal year 2023. The decrease in diluted earnings per share was attributable to a decrease in net income, partially offset by a decrease in the diluted weighted average number of shares outstanding, which resulted from share repurchases. The restructuring charges of $131.1 million and $70.9 million in fiscal years 2024 and 2023, decreased the diluted earnings per share by $0.98 and $0.46, respectively. Please see also Note 21 to our consolidated financial statements.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.482</span>
+            </header>
+            <div class="source-content" data-html="1">We conduct our business globally, and as a result we are subject to the effects of global economic conditions and, in particular, market conditions in the communications and media industry. In fiscal year 2024, customers in North America accounted for 66.5% of our revenue, while customers in Europe and the rest of the world accounted for 14.5% and 19.0%, respectively. We maintain development facilities in Brazil, Canada, Cyprus, India, Ireland, Israel, Mexico, the Philippines, the United Kingdom and the United States. Historically, AT&amp;T has been our largest customer, accounting for 24.5% and 23.8% of our revenue in fiscal years 2024 and 2023, respectively. In fiscal years 2024 and 2023, our next largest customer, T-Mobile, accounted for 22.6% and 23.1% of our revenue, respectively. Aggregate revenue derived from the multiple business arrangements we have with our ten largest customers accounted for approximately 70% of our revenue in fiscal years 2024 and 2023. We believe that demand</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.479</span>
+            </header>
+            <div class="source-content" data-html="1">Cost of Revenue. Cost of revenue consists primarily of costs associated with providing services to customers, including compensation expense and costs of third-party products and services, as well as fee and royalty payments to software suppliers. Cost of revenue increased by $89.7 million, or 2.8%, to $3,249.6 million in fiscal year 2024, from $3,159.9 million in fiscal year 2023. The cost of revenue as a percentage of total revenue slightly increased, from 64.7% in fiscal year 2023 to 64.9% in fiscal year 2024. The slight increase in cost of revenue as a percentage of revenue, was commensurate with revenue growth. Our cost of revenue was positively impacted by our continued focus on operational efficiency improvements and by foreign exchange fluctuations.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.463</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue 2024 100% September 2023 2022 100% 100% )perating expenses: Cost of revenue 64.9 64.7 64.6 Research and development 72 17 7.8 Selling, general and administrative 11.4 11.7 11.5 Amortization of purchased intangible assets and other 12 12 1.6 2.6 1.5 — Restructuring charges 87.4 86.6 85.5 )perating income 12.6 13.4 145 nterest and other expense, net (0.7) (0.4) (0.6) sain from sale of a business — — 0.2 ncome before income taxes 11.8 13.0 14.2 ncome taxes 1.9 1.9 2.2 Net income 9.9% 11.1% 12.0% Net income attributable to noncontrolling interests 0.06 0.05 — Net income attributable to Amdocs Limited 9.9% 11.1% 12.0%</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.461</span>
+            </header>
+            <div class="source-content" data-html="1">Operating Income. Operating income decreased by $25.4 million, or 3.9%, to $628.6 million in fiscal year 2024, from $654.0 million in fiscal year 2023. Operating income decreased as a percentage of total revenue, from 13.4% in fiscal year 2023 to 12.6% in fiscal year 2024. The decrease in operating income was attributable primarily to an increase in restructuring charges recorded in fiscal year 2024 compared to fiscal year 2023, as discussed above. Excluding the restructuring charges of $131.1 and $70.9 million recorded in fiscal years 2024 and 2023, respectively, our operating income as a percentage of revenue would have increased by 60 basis points, primarily as a result of continued focus on operational excellence through disciplined resource management, automation, and tools leveraging AI as well as GenAI, to drive additional cost savings and efficiency improvements. Our operating income was positively affected by foreign exchange impacts.</div>
+          </article>
+        </div>
+    <div class="message-meta">17:48</div></article><article class="message user" data-message-id="1779202174916"><div class="bubble">who are Amdocs two largest customers, and what percentage of revenue did they account for in 2024?</div><div class="message-meta">17:49</div></article><article class="message assistant" data-message-id="20"><div class="bubble markdown-body"><p>Amdocs' two largest customers in fiscal year 2024 were:</p>
+<ul>
+<li><strong>AT&amp;T:</strong> Accounted for <strong>24.5%</strong> of total revenue.</li>
+<li><strong>T-Mobile:</strong> Accounted for <strong>22.6%</strong> of total revenue.</li>
+</ul>
+<p>Together, these two customers accounted for 47.1% of Amdocs' total revenue for the year.</p>
+</div>
+      <button type="button" class="sources-toggle" data-target="sources-20">
+        View 10 retrieved sources
+      </button>
+      <div class="sources-panel" id="sources-20">
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.564</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue from customers in North America increased in absolute amount in fiscal year 2024, primarily attributable to higher revenue from key customers in North America. Revenue from customers in North America increased in fiscal year 2024, while total revenue increased at a higher rate, primarily due to slower pipeline to sales conversion, which resulted in a decrease of revenue from customers in North America as a percentage of total revenue.
+
+Revenue from customers in Europe as a percentage of total revenue remains stable. Revenue from customers in Europe increased in absolute amount in fiscal year 2024, as a result of an increase in managed services arrangements, as we expand our presence in this region.
+
+Revenue from customers in rest of the world increased significantly in fiscal year 2024, as project and managed services activities continued to ramp up with various customers, primarily in the Asia-Pacific region.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.538</span>
+            </header>
+            <div class="source-content" data-html="1">32
+
+Revenue. Revenue increased by $117.4 million, or 2.4%, to $5,005.0 million in fiscal year 2024, from $4,887.6 million in fiscal year 2023. The increase in revenue for fiscal year ended September 30, 2024, was attributable to increased activity across all regions. Revenue for fiscal year 2024 increased by 2.7% compared to fiscal year 2023, excluding approximately 0.3% negative foreign currency fluctuations impact. Revenue from our two largest customers increased in aggregate by 3.0 % in fiscal year 2024 compared to fiscal year 2023, while revenue from all other customers also increased in aggregate by 2.5%, excluding approximately 0.6% negative foreign currency fluctuations impact.
+
+In fiscal year 2024, revenue from customers in North America, Europe and the rest of the world accounted for 66.5%, 14.5% and 19.0%, respectively, of total revenue, compared to 67.7%, 14.4% and 17.9%, respectively, in fiscal year 2023.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.518</span>
+            </header>
+            <div class="source-content" data-html="1">In evaluating Amdocs’ portfolio of products, services and business activities in relation to our strategic investment priorities for fiscal year 2025, we decided to phase out several low-margin, non-core business activities that we believe are becoming commoditized and hold little potential for long-term value addition or profitability enhancement in the future. These activities, which generated revenue of approximately $600 million in fiscal year 2024, included, among others, certain low-margin software and hardware partner activities, Vubiquity’s transactional video on demand business and other non-core subscription services. These activities were substantially already ceased in the first quarter of fiscal 2025.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.512</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue
+
+Operating expenses:
+
+Operating income
+
+Interest and other expense, net
+
+Gain from sale of a business
+
+Income before income taxes
+
+Income taxes
+
+Net income
+
+Net income attributable to noncontrolling interests
+
+100%
+
+12.0%
+
+Net income attributable to Amdocs Limited
+
+12.0%</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.507</span>
+            </header>
+            <div class="source-content" data-html="1">We conduct our business globally, and as a result we are subject to the effects of global economic conditions and, in particular, market conditions in the communications and media industry. In fiscal year 2024, customers in North America accounted for 66.5% of our revenue, while customers in Europe and the rest of the world accounted for 14.5% and 19.0%, respectively. We maintain development facilities in Brazil, Canada, Cyprus, India, Ireland, Israel, Mexico, the Philippines, the United Kingdom and the United States. Historically, AT&amp;T has been our largest customer, accounting for 24.5% and 23.8% of our revenue in fiscal years 2024 and 2023, respectively. In fiscal years 2024 and 2023, our next largest customer, T-Mobile, accounted for 22.6% and 23.1% of our revenue, respectively. Aggregate revenue derived from the multiple business arrangements we have with our ten largest customers accounted for approximately 70% of our revenue in fiscal years 2024 and 2023. We believe that demand</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.465</span>
+            </header>
+            <div class="source-content" data-html="1">Competition
+
+The market for customer experience solutions in the communications and media industry continues to be highly competitive. Amdocs’ competitive landscape is comprised of internal IT departments of our customers, as well as independent competitors or new entrants that may compete broadly with us or in limited segments of our market, and can be generally categorized as follows (competitors in each category referenced below in alphabetical order):
+
+•
+
+providers of BSS/OSS and customer relationship management (CRM)/digital systems, including CSG International, Netcracker (a NEC subsidiary), Optiva, Oracle, Pegasystems, Salesforce, SAP and ServiceNow;
+
+•
+
+system integrators and providers of IT services, such as Accenture, Cap Gemini, Cognizant, DXC Technology, Infosys, Kyndryl, Tata Consultancy Services, Tech Mahindra and Wipro (some of whom we also cooperate with in certain opportunities and projects);
+
+•</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.459</span>
+            </header>
+            <div class="source-content" data-html="1">Cost of Revenue. Cost of revenue consists primarily of costs associated with providing services to customers, including compensation expense and costs of third-party products and services, as well as fee and royalty payments to software suppliers. Cost of revenue increased by $89.7 million, or 2.8%, to $3,249.6 million in fiscal year 2024, from $3,159.9 million in fiscal year 2023. The cost of revenue as a percentage of total revenue slightly increased, from 64.7% in fiscal year 2023 to 64.9% in fiscal year 2024. The slight increase in cost of revenue as a percentage of revenue, was commensurate with revenue growth. Our cost of revenue was positively impacted by our continued focus on operational efficiency improvements and by foreign exchange fluctuations.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.455</span>
+            </header>
+            <div class="source-content" data-html="1">Net income attributable to Amdocs Limited. Net income decreased by $47.5 million, or 8.8%, to $493.2 million in fiscal year 2024, from $540.7 million in fiscal year 2023. The decrease in net income is primarily attributable to a decrease in operating income, primarily as a result of an increase in restructuring charges and an increase in interest and other expense, net.
+
+Diluted Earnings Per Share. Diluted earnings per share decreased by $0.24, or 5.3%, to $4.25 in fiscal year 2024, from $4.49 in fiscal year 2023. The decrease in diluted earnings per share was attributable to a decrease in net income, partially offset by a decrease in the diluted weighted average number of shares outstanding, which resulted from share repurchases. The restructuring charges of $131.1 million and $70.9 million in fiscal years 2024 and 2023, decreased the diluted earnings per share by $0.98 and $0.46, respectively. Please see also Note 21 to our consolidated financial statements.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.453</span>
+            </header>
+            <div class="source-content" data-html="1">31
+
+Operating Results
+
+The following table sets forth for the fiscal years ended September 30, 2024, 2023 and 2022, certain items in our consolidated statements of income reflected as a percentage of revenue (figures may not sum because of rounding):</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.420</span>
+            </header>
+            <div class="source-content" data-html="1">Paramount Partner PLDT PPF Telecom Group Proximus Rogers Safaricom SES Singtel Sky Italia Sky UK StarHub Sunrise Telefónica Argentina (Movistar) Telefónica Brasil (Vivo) Telefónica Chile (Movistar) Telefónica Peru (Movistar) Telenet Telia Norway Telia Sweden Telkom SA Telkomsel Telstra TELUS Three Ireland Three UK Thryv TIM Brazil TPG Telecom True Turner T-Mobile UPC Broadband US Cellular VEON Verizon Virgin Media Vodacom Vodafone Albania Vodafone Czech Republic Vodafone Germany Vodafone Hungary Vodafone Idea Vodafone Ireland Vodafone Italy Vodafone Romania Vodafone Spain Vodafone Turkey Vodafone UK VodafoneZiggo Warner Bros Wind Tre Winity Telecom
+
+XL Axiata
+
+26
+
+The following is a summary of revenue by geographic area. Revenue is attributed to geographic region based on the location of the customer:</div>
+          </article>
+        </div>
+    <div class="message-meta">17:50</div></article><article class="message user" data-message-id="1779202225028"><div class="bubble">Which companies did Amdocs acquire during the fiscal year 2024?</div><div class="message-meta">17:50</div></article><article class="message user" data-message-id="1779202355012"><div class="bubble">Which companies did Amdocs acquire during the fiscal year 2024?</div><div class="message-meta">17:52</div></article><article class="message assistant" data-message-id="22"><div class="bubble markdown-body"><p>Based on the provided document context, there is no information regarding companies acquired by Amdocs during fiscal year 2024.</p>
+<p>The context mentions that Amdocs decided to <strong>phase out</strong> certain non-core business activities in fiscal year 2024 (such as Vubiquity’s transactional video on demand business), but it does not list any new acquisitions for that period.</p>
+</div>
+      <button type="button" class="sources-toggle" data-target="sources-22">View 10 retrieved sources</button>
+      <div class="sources-panel" id="sources-22">
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.589</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue from customers in North America increased in absolute amount in fiscal year 2024, primarily attributable to higher revenue from key customers in North America. Revenue from customers in North America increased in fiscal year 2024, while total revenue increased at a higher rate, primarily due to slower pipeline to sales conversion, which resulted in a decrease of revenue from customers in North America as a percentage of total revenue.
+
+Revenue from customers in Europe as a percentage of total revenue remains stable. Revenue from customers in Europe increased in absolute amount in fiscal year 2024, as a result of an increase in managed services arrangements, as we expand our presence in this region.
+
+Revenue from customers in rest of the world increased significantly in fiscal year 2024, as project and managed services activities continued to ramp up with various customers, primarily in the Asia-Pacific region.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.555</span>
+            </header>
+            <div class="source-content" data-html="1">We conduct our business globally, and as a result we are subject to the effects of global economic conditions and, in particular, market conditions in the communications and media industry. In fiscal year 2024, customers in North America accounted for 66.5% of our revenue, while customers in Europe and the rest of the world accounted for 14.5% and 19.0%, respectively. We maintain development facilities in Brazil, Canada, Cyprus, India, Ireland, Israel, Mexico, the Philippines, the United Kingdom and the United States. Historically, AT&amp;T has been our largest customer, accounting for 24.5% and 23.8% of our revenue in fiscal years 2024 and 2023, respectively. In fiscal years 2024 and 2023, our next largest customer, T-Mobile, accounted for 22.6% and 23.1% of our revenue, respectively. Aggregate revenue derived from the multiple business arrangements we have with our ten largest customers accounted for approximately 70% of our revenue in fiscal years 2024 and 2023. We believe that demand</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.553</span>
+            </header>
+            <div class="source-content" data-html="1">32
+
+Revenue. Revenue increased by $117.4 million, or 2.4%, to $5,005.0 million in fiscal year 2024, from $4,887.6 million in fiscal year 2023. The increase in revenue for fiscal year ended September 30, 2024, was attributable to increased activity across all regions. Revenue for fiscal year 2024 increased by 2.7% compared to fiscal year 2023, excluding approximately 0.3% negative foreign currency fluctuations impact. Revenue from our two largest customers increased in aggregate by 3.0 % in fiscal year 2024 compared to fiscal year 2023, while revenue from all other customers also increased in aggregate by 2.5%, excluding approximately 0.6% negative foreign currency fluctuations impact.
+
+In fiscal year 2024, revenue from customers in North America, Europe and the rest of the world accounted for 66.5%, 14.5% and 19.0%, respectively, of total revenue, compared to 67.7%, 14.4% and 17.9%, respectively, in fiscal year 2023.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.517</span>
+            </header>
+            <div class="source-content" data-html="1">In evaluating Amdocs’ portfolio of products, services and business activities in relation to our strategic investment priorities for fiscal year 2025, we decided to phase out several low-margin, non-core business activities that we believe are becoming commoditized and hold little potential for long-term value addition or profitability enhancement in the future. These activities, which generated revenue of approximately $600 million in fiscal year 2024, included, among others, certain low-margin software and hardware partner activities, Vubiquity’s transactional video on demand business and other non-core subscription services. These activities were substantially already ceased in the first quarter of fiscal 2025.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.491</span>
+            </header>
+            <div class="source-content" data-html="1">Competition
+
+The market for customer experience solutions in the communications and media industry continues to be highly competitive. Amdocs’ competitive landscape is comprised of internal IT departments of our customers, as well as independent competitors or new entrants that may compete broadly with us or in limited segments of our market, and can be generally categorized as follows (competitors in each category referenced below in alphabetical order):
+
+•
+
+providers of BSS/OSS and customer relationship management (CRM)/digital systems, including CSG International, Netcracker (a NEC subsidiary), Optiva, Oracle, Pegasystems, Salesforce, SAP and ServiceNow;
+
+•
+
+system integrators and providers of IT services, such as Accenture, Cap Gemini, Cognizant, DXC Technology, Infosys, Kyndryl, Tata Consultancy Services, Tech Mahindra and Wipro (some of whom we also cooperate with in certain opportunities and projects);
+
+•</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.475</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue
+
+Operating expenses:
+
+Operating income
+
+Interest and other expense, net
+
+Gain from sale of a business
+
+Income before income taxes
+
+Income taxes
+
+Net income
+
+Net income attributable to noncontrolling interests
+
+100%
+
+12.0%
+
+Net income attributable to Amdocs Limited
+
+12.0%</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.456</span>
+            </header>
+            <div class="source-content" data-html="1">Net income attributable to Amdocs Limited. Net income decreased by $47.5 million, or 8.8%, to $493.2 million in fiscal year 2024, from $540.7 million in fiscal year 2023. The decrease in net income is primarily attributable to a decrease in operating income, primarily as a result of an increase in restructuring charges and an increase in interest and other expense, net.
+
+Diluted Earnings Per Share. Diluted earnings per share decreased by $0.24, or 5.3%, to $4.25 in fiscal year 2024, from $4.49 in fiscal year 2023. The decrease in diluted earnings per share was attributable to a decrease in net income, partially offset by a decrease in the diluted weighted average number of shares outstanding, which resulted from share repurchases. The restructuring charges of $131.1 million and $70.9 million in fiscal years 2024 and 2023, decreased the diluted earnings per share by $0.98 and $0.46, respectively. Please see also Note 21 to our consolidated financial statements.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.454</span>
+            </header>
+            <div class="source-content" data-html="1">Cost of Revenue. Cost of revenue consists primarily of costs associated with providing services to customers, including compensation expense and costs of third-party products and services, as well as fee and royalty payments to software suppliers. Cost of revenue increased by $89.7 million, or 2.8%, to $3,249.6 million in fiscal year 2024, from $3,159.9 million in fiscal year 2023. The cost of revenue as a percentage of total revenue slightly increased, from 64.7% in fiscal year 2023 to 64.9% in fiscal year 2024. The slight increase in cost of revenue as a percentage of revenue, was commensurate with revenue growth. Our cost of revenue was positively impacted by our continued focus on operational efficiency improvements and by foreign exchange fluctuations.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.453</span>
+            </header>
+            <div class="source-content" data-html="1">Paramount Partner PLDT PPF Telecom Group Proximus Rogers Safaricom SES Singtel Sky Italia Sky UK StarHub Sunrise Telefónica Argentina (Movistar) Telefónica Brasil (Vivo) Telefónica Chile (Movistar) Telefónica Peru (Movistar) Telenet Telia Norway Telia Sweden Telkom SA Telkomsel Telstra TELUS Three Ireland Three UK Thryv TIM Brazil TPG Telecom True Turner T-Mobile UPC Broadband US Cellular VEON Verizon Virgin Media Vodacom Vodafone Albania Vodafone Czech Republic Vodafone Germany Vodafone Hungary Vodafone Idea Vodafone Ireland Vodafone Italy Vodafone Romania Vodafone Spain Vodafone Turkey Vodafone UK VodafoneZiggo Warner Bros Wind Tre Winity Telecom
+
+XL Axiata
+
+26
+
+The following is a summary of revenue by geographic area. Revenue is attributed to geographic region based on the location of the customer:</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.423</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue 2024 100% September 2023 2022 100% 100% )perating expenses: Cost of revenue 64.9 64.7 64.6 Research and development 72 17 7.8 Selling, general and administrative 11.4 11.7 11.5 Amortization of purchased intangible assets and other 12 12 1.6 2.6 1.5 — Restructuring charges 87.4 86.6 85.5 )perating income 12.6 13.4 145 nterest and other expense, net (0.7) (0.4) (0.6) sain from sale of a business — — 0.2 ncome before income taxes 11.8 13.0 14.2 ncome taxes 1.9 1.9 2.2 Net income 9.9% 11.1% 12.0% Net income attributable to noncontrolling interests 0.06 0.05 — Net income attributable to Amdocs Limited 9.9% 11.1% 12.0%</div>
+          </article>
+        </div>
+    <div class="message-meta">17:52</div></article><article class="message user" data-message-id="1779203048332"><div class="bubble">who is the best player ever in maccabi tel aviv(basketball)?</div><div class="message-meta">18:04</div></article><article class="message assistant" data-message-id="24"><div class="bubble markdown-body"><p>Based on the provided document context, I do not have any information regarding sports or the best players for Maccabi Tel Aviv (basketball). The retrieved documents focus exclusively on Amdocs' financial performance, geographic revenue, and business operations.</p>
+</div>
+      <button type="button" class="sources-toggle" data-target="sources-24">
+        View 10 retrieved sources
+      </button>
+      <div class="sources-panel" id="sources-24">
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.455</span>
+            </header>
+            <div class="source-content" data-html="1">In evaluating Amdocs’ portfolio of products, services and business activities in relation to our strategic investment priorities for fiscal year 2025, we decided to phase out several low-margin, non-core business activities that we believe are becoming commoditized and hold little potential for long-term value addition or profitability enhancement in the future. These activities, which generated revenue of approximately $600 million in fiscal year 2024, included, among others, certain low-margin software and hardware partner activities, Vubiquity’s transactional video on demand business and other non-core subscription services. These activities were substantially already ceased in the first quarter of fiscal 2025.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.452</span>
+            </header>
+            <div class="source-content" data-html="1">Competition
+
+The market for customer experience solutions in the communications and media industry continues to be highly competitive. Amdocs’ competitive landscape is comprised of internal IT departments of our customers, as well as independent competitors or new entrants that may compete broadly with us or in limited segments of our market, and can be generally categorized as follows (competitors in each category referenced below in alphabetical order):
+
+•
+
+providers of BSS/OSS and customer relationship management (CRM)/digital systems, including CSG International, Netcracker (a NEC subsidiary), Optiva, Oracle, Pegasystems, Salesforce, SAP and ServiceNow;
+
+•
+
+system integrators and providers of IT services, such as Accenture, Cap Gemini, Cognizant, DXC Technology, Infosys, Kyndryl, Tata Consultancy Services, Tech Mahindra and Wipro (some of whom we also cooperate with in certain opportunities and projects);
+
+•</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.390</span>
+            </header>
+            <div class="source-content" data-html="1">Property, Plants and Equipment
+
+Our principal capital expenditures for fiscal years 2024, 2023 and 2022 have been for computer equipment and software in our operating facilities and development centers, for which we spent approximately $72 million, $84 million and $92 million, respectively, and for the development of our new campus in Israel, for which we spent approximately $116 million in fiscal year 2022, (the amounts for fiscal years 2023 and 2024 were immaterial as we completed the move into our new campus during fiscal year 2023).
+
+Facilities
+
+Our properties consist of leased and owned (only in Ra’anana, Israel) facilities an aggregate of approximately 2.9 million square feet worldwide, including significant leases in the Canada, Cyprus, India, Israel, the Philippines, Mexico, the United Kingdom and the United States. The following table summarizes information with respect to the principal facilities leased and owned by us and our subsidiaries as of September 30, 2024:</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.371</span>
+            </header>
+            <div class="source-content" data-html="1">Net income attributable to Amdocs Limited. Net income decreased by $47.5 million, or 8.8%, to $493.2 million in fiscal year 2024, from $540.7 million in fiscal year 2023. The decrease in net income is primarily attributable to a decrease in operating income, primarily as a result of an increase in restructuring charges and an increase in interest and other expense, net.
+
+Diluted Earnings Per Share. Diluted earnings per share decreased by $0.24, or 5.3%, to $4.25 in fiscal year 2024, from $4.49 in fiscal year 2023. The decrease in diluted earnings per share was attributable to a decrease in net income, partially offset by a decrease in the diluted weighted average number of shares outstanding, which resulted from share repurchases. The restructuring charges of $131.1 million and $70.9 million in fiscal years 2024 and 2023, decreased the diluted earnings per share by $0.98 and $0.46, respectively. Please see also Note 21 to our consolidated financial statements.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.367</span>
+            </header>
+            <div class="source-content" data-html="1">We conduct our business globally, and as a result we are subject to the effects of global economic conditions and, in particular, market conditions in the communications and media industry. In fiscal year 2024, customers in North America accounted for 66.5% of our revenue, while customers in Europe and the rest of the world accounted for 14.5% and 19.0%, respectively. We maintain development facilities in Brazil, Canada, Cyprus, India, Ireland, Israel, Mexico, the Philippines, the United Kingdom and the United States. Historically, AT&amp;T has been our largest customer, accounting for 24.5% and 23.8% of our revenue in fiscal years 2024 and 2023, respectively. In fiscal years 2024 and 2023, our next largest customer, T-Mobile, accounted for 22.6% and 23.1% of our revenue, respectively. Aggregate revenue derived from the multiple business arrangements we have with our ten largest customers accounted for approximately 70% of our revenue in fiscal years 2024 and 2023. We believe that demand</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.360</span>
+            </header>
+            <div class="source-content" data-html="1">Our leases expire on various dates through 2033. In fiscal year 2023, the Company has started to use its campus in Ra’anana, Israel on land acquired by a legal entity owned equally by the Company and Union Investments and Development Limited (“Union”) pursuant to agreements entered into by the Company and Union in December 2017. The campus provides an advanced working environment that meets the needs of Amdocs Israel and its employees, and supports the Company’s future growth. The design for the campus is in accordance with LEED Gold standards and includes advanced energy and water saving systems.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.352</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue
+
+Operating expenses:
+
+Operating income
+
+Interest and other expense, net
+
+Gain from sale of a business
+
+Income before income taxes
+
+Income taxes
+
+Net income
+
+Net income attributable to noncontrolling interests
+
+100%
+
+12.0%
+
+Net income attributable to Amdocs Limited
+
+12.0%</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.340</span>
+            </header>
+            <div class="source-content" data-html="1">Revenue from customers in North America increased in absolute amount in fiscal year 2024, primarily attributable to higher revenue from key customers in North America. Revenue from customers in North America increased in fiscal year 2024, while total revenue increased at a higher rate, primarily due to slower pipeline to sales conversion, which resulted in a decrease of revenue from customers in North America as a percentage of total revenue.
+
+Revenue from customers in Europe as a percentage of total revenue remains stable. Revenue from customers in Europe increased in absolute amount in fiscal year 2024, as a result of an increase in managed services arrangements, as we expand our presence in this region.
+
+Revenue from customers in rest of the world increased significantly in fiscal year 2024, as project and managed services activities continued to ramp up with various customers, primarily in the Asia-Pacific region.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.337</span>
+            </header>
+            <div class="source-content" data-html="1">Overview of Business and Trend Information
+
+Amdocs is a leading provider of software and services for communications and media industry service providers in both developed countries and emerging markets. We believe the demand for our solutions is driven by our customers’ continued migration to the cloud, deployment of 5G standalone, fixed wireless access (FWA), and fiber networks and their transformation into digital service providers to provide connectivity services, content and applications (apps) on any device through digital and non-digital channels. Regardless of whether service providers are bringing their first offerings to market, scaling for growth, consolidating systems or transforming the way they do business, we believe that they seek to differentiate their offerings by delivering a customer experience that is simple, personal, contextual and valuable at every point of engagement and across all channels.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.327</span>
+            </header>
+            <div class="source-content" data-html="1">Paramount Partner PLDT PPF Telecom Group Proximus Rogers Safaricom SES Singtel Sky Italia Sky UK StarHub Sunrise Telefónica Argentina (Movistar) Telefónica Brasil (Vivo) Telefónica Chile (Movistar) Telefónica Peru (Movistar) Telenet Telia Norway Telia Sweden Telkom SA Telkomsel Telstra TELUS Three Ireland Three UK Thryv TIM Brazil TPG Telecom True Turner T-Mobile UPC Broadband US Cellular VEON Verizon Virgin Media Vodacom Vodafone Albania Vodafone Czech Republic Vodafone Germany Vodafone Hungary Vodafone Idea Vodafone Ireland Vodafone Italy Vodafone Romania Vodafone Spain Vodafone Turkey Vodafone UK VodafoneZiggo Warner Bros Wind Tre Winity Telecom
+
+XL Axiata
+
+26
+
+The following is a summary of revenue by geographic area. Revenue is attributed to geographic region based on the location of the customer:</div>
+          </article>
+        </div>
+    <div class="message-meta">18:04</div></article><article class="message user" data-message-id="1779203157816"><div class="bubble">how many question did i ask you?</div><div class="message-meta">18:05</div></article><article class="message assistant" data-message-id="26"><div class="bubble markdown-body"><p>Including your current question, you have asked a total of <strong>6</strong> questions in this session:</p>
+<ol>
+<li>What was Amdocs' total revenue in fiscal year 2024?</li>
+<li>Which geographic region accounted for the highest percentage of revenue in 2024?</li>
+<li>Who are Amdocs' two largest customers and their revenue percentages?</li>
+<li>Which companies did Amdocs acquire during fiscal year 2024?</li>
+<li>Who is the best player ever in Maccabi Tel Aviv (basketball)?</li>
+<li>How many questions did I ask you? (The current question).</li>
+</ol>
+</div>
+      <button type="button" class="sources-toggle" data-target="sources-26">
+        View 10 retrieved sources
+      </button>
+      <div class="sources-panel" id="sources-26">
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.385</span>
+            </header>
+            <div class="source-content" data-html="1">In evaluating Amdocs’ portfolio of products, services and business activities in relation to our strategic investment priorities for fiscal year 2025, we decided to phase out several low-margin, non-core business activities that we believe are becoming commoditized and hold little potential for long-term value addition or profitability enhancement in the future. These activities, which generated revenue of approximately $600 million in fiscal year 2024, included, among others, certain low-margin software and hardware partner activities, Vubiquity’s transactional video on demand business and other non-core subscription services. These activities were substantially already ceased in the first quarter of fiscal 2025.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.362</span>
+            </header>
+            <div class="source-content" data-html="1">Property, Plants and Equipment
+
+Our principal capital expenditures for fiscal years 2024, 2023 and 2022 have been for computer equipment and software in our operating facilities and development centers, for which we spent approximately $72 million, $84 million and $92 million, respectively, and for the development of our new campus in Israel, for which we spent approximately $116 million in fiscal year 2022, (the amounts for fiscal years 2023 and 2024 were immaterial as we completed the move into our new campus during fiscal year 2023).
+
+Facilities
+
+Our properties consist of leased and owned (only in Ra’anana, Israel) facilities an aggregate of approximately 2.9 million square feet worldwide, including significant leases in the Canada, Cyprus, India, Israel, the Philippines, Mexico, the United Kingdom and the United States. The following table summarizes information with respect to the principal facilities leased and owned by us and our subsidiaries as of September 30, 2024:</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.355</span>
+            </header>
+            <div class="source-content" data-html="1">Competition
+
+The market for customer experience solutions in the communications and media industry continues to be highly competitive. Amdocs’ competitive landscape is comprised of internal IT departments of our customers, as well as independent competitors or new entrants that may compete broadly with us or in limited segments of our market, and can be generally categorized as follows (competitors in each category referenced below in alphabetical order):
+
+•
+
+providers of BSS/OSS and customer relationship management (CRM)/digital systems, including CSG International, Netcracker (a NEC subsidiary), Optiva, Oracle, Pegasystems, Salesforce, SAP and ServiceNow;
+
+•
+
+system integrators and providers of IT services, such as Accenture, Cap Gemini, Cognizant, DXC Technology, Infosys, Kyndryl, Tata Consultancy Services, Tech Mahindra and Wipro (some of whom we also cooperate with in certain opportunities and projects);
+
+•</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.333</span>
+            </header>
+            <div class="source-content" data-html="1">Our leases expire on various dates through 2033. In fiscal year 2023, the Company has started to use its campus in Ra’anana, Israel on land acquired by a legal entity owned equally by the Company and Union Investments and Development Limited (“Union”) pursuant to agreements entered into by the Company and Union in December 2017. The campus provides an advanced working environment that meets the needs of Amdocs Israel and its employees, and supports the Company’s future growth. The design for the campus is in accordance with LEED Gold standards and includes advanced energy and water saving systems.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.297</span>
+            </header>
+            <div class="source-content" data-html="1">Net income attributable to Amdocs Limited. Net income decreased by $47.5 million, or 8.8%, to $493.2 million in fiscal year 2024, from $540.7 million in fiscal year 2023. The decrease in net income is primarily attributable to a decrease in operating income, primarily as a result of an increase in restructuring charges and an increase in interest and other expense, net.
+
+Diluted Earnings Per Share. Diluted earnings per share decreased by $0.24, or 5.3%, to $4.25 in fiscal year 2024, from $4.49 in fiscal year 2023. The decrease in diluted earnings per share was attributable to a decrease in net income, partially offset by a decrease in the diluted weighted average number of shares outstanding, which resulted from share repurchases. The restructuring charges of $131.1 million and $70.9 million in fiscal years 2024 and 2023, decreased the diluted earnings per share by $0.98 and $0.46, respectively. Please see also Note 21 to our consolidated financial statements.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.273</span>
+            </header>
+            <div class="source-content" data-html="1">Overview of Business and Trend Information
+
+Amdocs is a leading provider of software and services for communications and media industry service providers in both developed countries and emerging markets. We believe the demand for our solutions is driven by our customers’ continued migration to the cloud, deployment of 5G standalone, fixed wireless access (FWA), and fiber networks and their transformation into digital service providers to provide connectivity services, content and applications (apps) on any device through digital and non-digital channels. Regardless of whether service providers are bringing their first offerings to market, scaling for growth, consolidating systems or transforming the way they do business, we believe that they seek to differentiate their offerings by delivering a customer experience that is simple, personal, contextual and valuable at every point of engagement and across all channels.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.264</span>
+            </header>
+            <div class="source-content" data-html="1">Liquidity and Capital Resources
+
+Cash, Cash Equivalents and Short-Term Interest-Bearing Investments. Cash, cash equivalents and short-term interest-bearing investments, totaled $514.3 million as of September 30, 2024, compared to $742.5 million as of September 30, 2023. The decrease was mainly attributable to $563.1 million used to repurchase our ordinary shares, $212.0 million of cash dividend payments, $105.5 million for capital expenditures, net, $86.8 million of payments for business acquisitions, partially offset by $724.4 million in positive cash flow from operations, reflecting healthy cash collections and $26.9 million of proceeds from stock option exercises. Net cash provided by operating activities amounted to $724.4 million and $822.6 million in fiscal years 2024 and 2023, respectively.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.259</span>
+            </header>
+            <div class="source-content" data-html="1">In part, we have sought, through acquisitions, to expand our products and services offerings and customer base and to enhance our ability to provide managed services to our customers. In recent years, we have completed numerous acquisitions (including our fiscal year 2022 acquisitions of Roam Digital and DevOpsGroup, our fiscal year 2023 acquisitions of the service assurance business of TEOCO, and of ProCom Consulting and our fiscal year 2024 acquisitions of Astadia, and the network engineering businesses of Pramira), which, among other things, we believe will enable us to expand our 5G, fiber, digital and cloud-native capabilities, service assurance and cloud migration expertise. As part of our strategy, we may continue to pursue acquisitions and other initiatives in order to offer new products or services, enter into new vertical markets or otherwise enhance our market position or strategic strengths.</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.259</span>
+            </header>
+            <div class="source-content" data-html="1">We conduct our business globally, and as a result we are subject to the effects of global economic conditions and, in particular, market conditions in the communications and media industry. In fiscal year 2024, customers in North America accounted for 66.5% of our revenue, while customers in Europe and the rest of the world accounted for 14.5% and 19.0%, respectively. We maintain development facilities in Brazil, Canada, Cyprus, India, Ireland, Israel, Mexico, the Philippines, the United Kingdom and the United States. Historically, AT&amp;T has been our largest customer, accounting for 24.5% and 23.8% of our revenue in fiscal years 2024 and 2023, respectively. In fiscal years 2024 and 2023, our next largest customer, T-Mobile, accounted for 22.6% and 23.1% of our revenue, respectively. Aggregate revenue derived from the multiple business arrangements we have with our ten largest customers accounted for approximately 70% of our revenue in fiscal years 2024 and 2023. We believe that demand</div>
+          </article>
+        
+          <article class="source-card">
+            <header>
+              <span class="badge">text</span>
+              <span>amdocs_annoul_report_example.pdf</span>
+              <span class="score">relevance 0.259</span>
+            </header>
+            <div class="source-content" data-html="1">The Amdocs Offerings
+
+Our portfolio consists of software and services that address service providers’ business and operational needs. Our offerings, grouped by technology capabilities such as monetization, commerce and care, service and network automation, are designed to meet the challenges facing our customers as they roll out 5G networks, migrate to the cloud, introduce GenAI solutions, and transform into digital service providers within the framework of a hybrid IT environment, which requires them to rapidly introduce new cloud-native applications while still operating legacy systems. Our software is designed to enable modular expansion as a service provider evolves, and its microservices-based architecture enables the rapid deployment of complex applications as suites of independently deployable services that can be frequently upgraded via DevSecOps.</div>
+          </article>
+        </div>
+    <div class="message-meta">18:06</div></article></section>
+
+            <div id="typing-indicator" class="typing-indicator" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+
+            <footer class="composer">
+                <form id="chat-form">
+                    <textarea id="query-input" name="query" rows="1" placeholder="Ask a question about the report…" autocomplete="off" required="" style="height: auto;"></textarea>
+                    <button type="submit" id="send-btn" class="btn-send">Send</button>
+                </form>
+                <div id="loading-bar" class="loading-bar">
+                    <span class="spinner" aria-hidden="true"></span>
+                    <span>Retrieving context and generating answer…</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <div id="toast" class="toast" role="alert">503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}</div>
+
+    <script src="./outputRagWeb_files/marked.min.js.הורדה"></script>
+    <script src="./outputRagWeb_files/purify.min.js.הורדה"></script>
+    <script src="./outputRagWeb_files/app.js.הורדה"></script>
+
+</body></html>
